@@ -1,0 +1,6 @@
+--ignore-dir=coverage_html, .pytest_cache
+--ignore-file=match:/[.]log.*/
+--ignore-file=match:/[.]json$/
+--ignore-file=match:/.coverage$/
+--ignore-dir=match:/.venv$/
+--ignore-dir=match:/vendor$/
