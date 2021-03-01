@@ -14,8 +14,8 @@ PYTHON:=$(shell which python3)
 PIP:=$(PYTHON) -m pip
 PIPENV_LOCK_ARGS:= --deploy --ignore-pipfile
 
-PIPENV_VERSION=2018.11.26
-PIP_VERSION=19.0.2
+PIPENV_VERSION=2020.11.15
+PIP_VERSION=21.0.1
 
 MIN_COVERAGE_PERCENT:=50
 SHELL:=/bin/bash
@@ -126,7 +126,7 @@ pipenv-install-inspect:
 style: isort autopep8 yapf  ## Format code
 
 isort:
-	$(PIPENV) run isort -y -rc $(MODULES)
+	$(PIPENV) run isort -rc $(MODULES)
 
 autopep8:
 	$(PIPENV) run autopep8 --in-place --recursive setup.py $(MODULES)
@@ -153,7 +153,7 @@ yapf-check:
 	$(PIPENV) run yapf --style .yapf --recursive --diff $(MODULES)
 
 flake8:
-	$(PIPENV) run python setup.py flake8
+	$(PIPENV) run flake8
 
 pylint:
 	$(PIPENV) run pylint --rcfile=.pylintrc --output-format=colorized $(MODULES)

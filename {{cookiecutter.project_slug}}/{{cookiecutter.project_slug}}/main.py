@@ -1,5 +1,6 @@
 # coding: utf-8
 
+import sys
 import logging
 
 # {{ cookiecutter.project_name }} Modules

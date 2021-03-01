@@ -3,17 +3,17 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 
 [requires]
-python_version = '3'
+python_version = '3.8'
 
 [dev-packages]
 flake8 = "*"
 pycodestyle = "*"
 pyflakes = "*"
-pylint = "<2.3.0"
+pylint = "*"
 yapf = "*"
 pytest = "*"
 pipenv-to-requirements = "*"
-"flake8-comprehensions" = "*"
+flake8-comprehensions = "*"
 pytest-mock = "*"
 pytest-sugar = "*"
 mock = "*"
@@ -21,8 +21,8 @@ rope = "*"
 isort = "*"
 sphinx-rtd-theme = "*"
 sphinx = "*"
-"m2r" = "*"
-"autopep8" = "*"
+m2r = "*"
+autopep8 = "*"
 mypy = "*"
 pytest-cov = "*"
 pydocstyle = "*"
