@@ -4,10 +4,10 @@
 if [ -f /etc/lsb-release ]; then
     grep "Ubuntu" /etc/lsb-release 2> /dev/null > /dev/null
     if [ $? == 0 ]; then
-        MAJOR=$(pip show virtualenv | grep 'Version:' | cut -d':' -f2 | sed "s/ //g" | cut -d'.' -f 1)
+        MAJOR=$(pip3 show virtualenv | grep 'Version:' | cut -d':' -f2 | sed "s/ //g" | cut -d'.' -f 1)
         if [[ $MAJOR < 12 ]]; then
             echo "Need to update virtualenv ! Please execute:"
-            echo "    pip install -U virtualenv>=12.0.2"
+            echo "    pip3 install -U virtualenv>=12.0.2"
             exit 1
         fi
     fi
@@ -32,7 +32,7 @@ set -xe
 
 echo "Setting up environment for testing..."\
 # note: do NOT use --dev here, we want to use the "prod" cookiecutter
-python3 -m pip install --user --upgrade pip==19.0.2 pipenv==2018.11.26
+python3 -m pip3 install --user --upgrade pip==19.0.2 pipenv==2018.11.26
 pipenv install
 
 echo "Creating testdir"

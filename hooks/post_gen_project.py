@@ -21,7 +21,7 @@ if __name__ == '__main__':
             "https://github.com/"
             "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}"
         ])
-        print("Please ensure the creation of the following project in githab: "
+        print("Please ensure the creation of the following project in github: "
             "{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}")
 
     subprocess.check_call(["git", "add", ".*", "*"])
